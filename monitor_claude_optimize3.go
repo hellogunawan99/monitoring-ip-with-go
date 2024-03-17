@@ -33,10 +33,10 @@ const (
 
 func main() {
 	// Replace YOUR_BOT_TOKEN with the actual token of your Telegram bot
-	botToken := "7132166614:AAFYC8xocSMOx8il3ODvTLn0wGmjIPGsb5s"
+	botToken := "bot_token"
 
 	// Replace CHAT_ID with the ID of the chat you want to send the message to
-	chatID := "-1002121962452"
+	chatID := "chat_id"
 
 	// List of IP addresses to monitor with their aliases
 	ipMonitors := []IPMonitor{
@@ -103,10 +103,10 @@ func main() {
 
 func checkIPReachability(ipMonitors []IPMonitor, db *sql.DB, hourlyData, dailyData map[string][]int, dailyStartTime time.Time, pingChan chan struct{}) {
 	// Replace YOUR_BOT_TOKEN with the actual token of your Telegram bot
-	botToken := "7132166614:AAFYC8xocSMOx8il3ODvTLn0wGmjIPGsb5s"
+	botToken := "bot_token"
 
 	// Replace CHAT_ID with the ID of the chat you want to send the message to
-	chatID := "-1002121962452"
+	chatID := "chat_id"
 	var wg sync.WaitGroup
 	wg.Add(len(ipMonitors) * numGoroutinesPerIP)
 
